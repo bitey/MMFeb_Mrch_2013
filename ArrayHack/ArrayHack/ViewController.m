@@ -50,12 +50,33 @@
 
 
 - (IBAction)addElement:(id)sender {
-    // Put your code to add the element here;
+    int i;
+    int indexToRemove = 4;
+    
+    for (i=indexToRemove; i<=numberOfElements; indexToRemove++) {
+        i++;
+        numberArray[indexToRemove] = i;
+        
+    }
+    numberOfElements=10;
     [self displayArray];
 }
 
+//declare an index variable i
+//hardcode a value into a new variable indexToRemove
+//for loop where the index is equal to the indexToRemove and run through the code
+//In the loop, overwrite the array starting at indexToRemove and equal it to the next number in the array...increment the index variable i
+//adjust the array of [i-1] = 0
+//adjust numberOfElements = i-1 which changes the array length
 - (IBAction)removeElement:(id)sender {
-    // Put your code to remove the element here;
+    int i;
+    int indexToRemove = 4;
+    for (i=indexToRemove; i<numberOfElements; indexToRemove++) {
+        i++;
+        numberArray[indexToRemove] = i+1;
+        NSLog(@"%i",numberOfElements);
+    }
+    numberOfElements=9;
     [self displayArray];
 }
 
